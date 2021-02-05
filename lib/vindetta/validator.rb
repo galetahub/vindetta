@@ -15,6 +15,7 @@ module Vindetta
     rescue Calculator::InvalidCharacterError
       false
     end
+    alias valid? vin
 
     def wmi(wmi)
       wmi.length == standard.wmi.length
