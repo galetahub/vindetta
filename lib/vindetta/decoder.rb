@@ -37,6 +37,7 @@ module Vindetta
       characters = position["characters"]
 
       index = characters.find_index { |c| c == vin[9] }
+      return unless index
 
       if ALPHA.include?(vin[6])
         BASE_MODEL_YEAR + index + 30
